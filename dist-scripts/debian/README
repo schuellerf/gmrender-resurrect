@@ -4,3 +4,17 @@ A more up to date version of these files may be available at
 https://github.com/christiscarborough/gmrender-resurrect-debian
 
 Contributed by Christi Scarborough <christi@coraline.org>.
+
+---
+There is an additional service file gmediarender.service.
+When copied to /lib/systemd/user/gmediarender.service
+any user can start gmediarender interacting with the pulseaudio/pipewire user session with
+
+```
+systemctl --user enable gmediarender
+systemctl --user start gmediarender
+```
+
+TBD: integrate with debian packaging for ubuntu and compatibles...
+
+Contributed by Florian Schüller <florian.schueller@gmail.com>

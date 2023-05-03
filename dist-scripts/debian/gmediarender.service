@@ -1,0 +1,10 @@
+[Unit]
+Description=GMediaRender Service to play stuff from UPNP in the LAN
+After=pulseaudio.socket
+
+[Service]
+Environment="GMEDIARENDER_FRIENDLYNAME=\"GMediaRender %H\""
+ExecStart=/usr/bin/env gmediarender --friendly-name "$GMEDIARENDER_FRIENDLYNAME"
+
+[Install]
+WantedBy=default.target
