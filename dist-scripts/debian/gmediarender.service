@@ -4,7 +4,7 @@ After=pulseaudio.socket
 
 [Service]
 Environment="GMEDIARENDER_FRIENDLYNAME=\"GMediaRender %H\""
-ExecStart=/usr/bin/env gmediarender --friendly-name "$GMEDIARENDER_FRIENDLYNAME"
+ExecStart=/usr/bin/env gmediarender --uuid "%m" --friendly-name "$GMEDIARENDER_FRIENDLYNAME"
 
 [Install]
 WantedBy=default.target
